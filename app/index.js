@@ -1,18 +1,18 @@
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const compression = require("compression");
-const rateLimiter = require("express-rate-limit");
-const cookieParser = require("cookie-parser");
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const compression = require('compression');
+const rateLimiter = require('express-rate-limit');
+const cookieParser = require('cookie-parser');
 
-const { cors: corsOpts, rateLimit } = require("../configs");
-const { errorHandler, notFound, requestLogger } = require("./middlewares");
+const { cors: corsOpts, rateLimit } = require('../configs');
+const { errorHandler, notFound, requestLogger } = require('./middlewares');
 
 const app = express();
 const limiter = rateLimiter(rateLimit);
 
 // Middleware
-app.use(express.static("public"));
+app.use(express.static('public'));
 app.use(requestLogger);
 const { allowedOrigins, ...rest } = corsOpts;
 app.use(
@@ -21,8 +21,8 @@ app.use(
     origin: (origin, callback) =>
       allowedOrigins.includes(origin) || !origin
         ? callback(null, true)
-        : callback(new Error("Not allowed by CORS")),
-  })
+        : callback(new Error('Not allowed by CORS')),
+  }),
 );
 app.use(limiter);
 app.use(express.json());

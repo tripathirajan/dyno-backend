@@ -1,13 +1,13 @@
 // Description: Main entry point for the application.
-require("dotenv").config({});
-const http = require("http");
-const https = require("https");
-const app = require("./app");
+require('dotenv').config({});
+const http = require('http');
+const https = require('https');
+const app = require('./app');
 
-const { port, env, server: serverConfig } = require("./configs");
+const { port, env, server: serverConfig } = require('./configs');
 
 const loadServer = () => {
-  return env === "development"
+  return env === 'development'
     ? http.createServer(app)
     : https.createServer(app, serverConfig);
 };

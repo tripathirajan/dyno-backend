@@ -1,5 +1,5 @@
 module.exports = {
-  env: "production",
+  env: 'production',
   port: process.env.PORT || 3000,
   server: {
     key: process.env.SSL_KEY,
@@ -10,7 +10,7 @@ module.exports = {
   },
   jwt: {
     secret: process.env.JWT_SECRET,
-    expiresIn: process.env.JWT_EXPIRES_IN || "1h",
+    expiresIn: process.env.JWT_EXPIRES_IN || '1h',
   },
   rateLimit: {
     windowMs: 15 * 60 * 1000,
@@ -18,10 +18,10 @@ module.exports = {
   },
   cors: {
     origin: [
-      "https://dyno-app.herokuapp.com",
-      "https://dyno-app-tripathirajan.vercel.app",
+      'https://dyno-app.herokuapp.com',
+      'https://dyno-app-tripathirajan.vercel.app',
     ],
-    methods: "GET,HEAD,PUT,PATCH,POST",
+    methods: 'GET,HEAD,PUT,PATCH,POST',
     preflightContinue: false,
     optionsSuccessStatus: 204,
   },
