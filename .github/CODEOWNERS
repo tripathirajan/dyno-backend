@@ -1,0 +1,19 @@
+# This is a comment.
+
+# Each line is a file pattern followed by one or more owners.
+
+# Code owners for all files
+
+- @tripathirajan
+
+# Code owners for specific directories
+
+/app/ @tripathirajan
+/services/ @tripathirajan
+/lib/ @tripathirajan
+/config/ @tripathirajan
+
+# Code owners for specific files
+
+/README.md @tripathirajan
+/package.json @tripathirajan
