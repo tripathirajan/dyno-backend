@@ -1,4 +1,4 @@
-const { errorHandler, notFound } = require("./errors");
+const { errorHandler, notFound } = require("../../../app/middlewares/errors");
 
 describe("Middleware Tests", () => {
   describe("errorHandler", () => {

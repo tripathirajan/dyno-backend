@@ -1,6 +1,10 @@
-const { errorHandler, notFound, requestLogger } = require("./index");
-const errors = require("./errors");
-const requestLoggerModule = require("./requestLogger");
+const {
+  errorHandler,
+  notFound,
+  requestLogger,
+} = require("../../../app/middlewares/index");
+const errors = require("../../../app/middlewares/errors");
+const requestLoggerModule = require("../../../app/middlewares/requestLogger");
 
 describe("Index Module", () => {
   it("should export errorHandler", () => {

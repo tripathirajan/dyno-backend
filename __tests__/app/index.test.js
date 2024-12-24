@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const compression = require("compression");
 const rateLimiter = require("express-rate-limit");
 const cookieParser = require("cookie-parser");
-const app = require("./index");
+const app = require("../../app/index");
 
 jest.mock("express", () => {
   const mExpress = jest.fn(() => ({
@@ -22,8 +22,12 @@ jest.mock("compression");
 jest.mock("express-rate-limit");
 jest.mock("cookie-parser");
 
-const { cors: corsOpts, rateLimit } = require("../configs");
-const { errorHandler, notFound, requestLogger } = require("./middlewares");
+const { cors: corsOpts, rateLimit } = require("../../configs");
+const {
+  errorHandler,
+  notFound,
+  requestLogger,
+} = require("../../app/middlewares");
 
 describe("Express App", () => {
   let limiter;

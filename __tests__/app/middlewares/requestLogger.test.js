@@ -1,4 +1,4 @@
-const requestLogger = require("./requestLogger");
+const requestLogger = require("../../../app/middlewares/requestLogger");
 
 describe("requestLogger Middleware", () => {
   it("should log the request method and path", () => {
