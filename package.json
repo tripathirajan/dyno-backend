@@ -1,7 +1,7 @@
 {
   "name": "@tripathirajan/dyno-backend",
   "version": "1.0.0",
-  "description": "Backend application built with expressJs",
+  "description": "Backend application build using expressJs",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
